@@ -18,32 +18,40 @@ class ViewController: UIViewController {
     var selectedImage: UIImageView!
     
     let images = [UIImage(named: "1"), UIImage(named: "2"), UIImage(named: "3")]
+    @IBOutlet weak var nextTap: UIButton!
     @IBAction func nextButton(_ sender: Any) {
-        if self.timer == nil{
+        
         if imageIndex == 2 {
             imageIndex = 0
         } else {
             imageIndex += 1
         }
         image.image = images[imageIndex]
-        }
+        
     }
+    @IBOutlet weak var backTap: UIButton!
     @IBAction func backButton(_ sender: Any) {
-        if self.timer == nil{
+       
         if imageIndex == 0 {
                    imageIndex = 2
                } else {
                    imageIndex -= 1
                }
                image.image = images[imageIndex]
-        }
+        
     }
     @IBAction func showButton(_ sender: Any) {
         if self.timer == nil{
         timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(ViewController.onTimer(_:)), userInfo: nil, repeats: true)
+            
+            backTap.isEnabled = false
+            nextTap.isEnabled = false
+            
         } else{
             self.timer.invalidate()   // タイマーを停止する
             self.timer = nil          // startTimer() の self.timer == nil で判断するために、 self.timer = nil としておく
+            backTap.isEnabled = true
+            nextTap.isEnabled = true
         }
     }
     
@@ -71,6 +79,13 @@ class ViewController: UIViewController {
         image.image = images[imageIndex]
     }
     
+    @IBAction func imageButton(_ sender: Any) {
+        if self.timer != nil{
+            self.timer.invalidate()
+            backTap.isEnabled = true
+            nextTap.isEnabled = true
+        }
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // segueから遷移先のResultViewControllerを取得する
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
