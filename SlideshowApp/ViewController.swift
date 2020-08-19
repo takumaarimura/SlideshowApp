@@ -40,6 +40,7 @@ class ViewController: UIViewController {
                image.image = images[imageIndex]
         
     }
+    @IBOutlet weak var showTap: UIButton!
     @IBAction func showButton(_ sender: Any) {
         if self.timer == nil{
         timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(ViewController.onTimer(_:)), userInfo: nil, repeats: true)
@@ -47,11 +48,15 @@ class ViewController: UIViewController {
             backTap.isEnabled = false
             nextTap.isEnabled = false
             
+            (sender as AnyObject).setTitle("停止",for: .normal)
+            
         } else{
             self.timer.invalidate()   // タイマーを停止する
             self.timer = nil          // startTimer() の self.timer == nil で判断するために、 self.timer = nil としておく
             backTap.isEnabled = true
             nextTap.isEnabled = true
+            
+            (sender as AnyObject).setTitle("再生",for: .normal)
         }
     }
     

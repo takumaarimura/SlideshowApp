@@ -37,8 +37,8 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsp-1V-AT7">
-                                <rect key="frame" x="273" y="487" width="77" height="30"/>
-                                <state key="normal" title="再生／停止"/>
+                                <rect key="frame" x="319" y="487" width="31" height="30"/>
+                                <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="showButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Rn-5f-KrH"/>
                                 </connections>
@@ -74,6 +74,7 @@
                         <outlet property="backTap" destination="Y2X-h3-VMk" id="mt3-X7-dd5"/>
                         <outlet property="image" destination="V2h-M3-FPt" id="Cdf-h6-pWv"/>
                         <outlet property="nextTap" destination="jBm-Uu-YGR" id="rj5-Es-c6G"/>
+                        <outlet property="showTap" destination="gsp-1V-AT7" id="X0a-uf-0EA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -89,14 +90,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QBZ-V4-PuH">
-                                <rect key="frame" x="37.5" y="120" width="300" height="450"/>
+                                <rect key="frame" x="37.5" y="100" width="300" height="450"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="450" id="b3x-Ld-8ls"/>
                                     <constraint firstAttribute="width" constant="300" id="cI4-Jh-KmD"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjM-m4-uPM">
-                                <rect key="frame" x="172" y="690" width="31" height="30"/>
+                                <rect key="frame" x="172" y="587" width="31" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <segue destination="wgQ-Z9-5F7" kind="unwind" unwindAction="unwind:" id="7HG-Gu-PHz"/>
@@ -105,10 +106,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="QBZ-V4-PuH" firstAttribute="top" secondItem="Igf-H4-f6e" secondAttribute="top" constant="120" id="ErR-fF-PpY"/>
                             <constraint firstItem="TjM-m4-uPM" firstAttribute="centerX" secondItem="eW3-zh-BDb" secondAttribute="centerX" id="TcJ-hs-32Q"/>
+                            <constraint firstItem="Igf-H4-f6e" firstAttribute="bottom" secondItem="TjM-m4-uPM" secondAttribute="bottom" constant="30" id="XKF-TJ-urQ"/>
                             <constraint firstItem="QBZ-V4-PuH" firstAttribute="centerX" secondItem="eW3-zh-BDb" secondAttribute="centerX" id="vhQ-jy-hWV"/>
-                            <constraint firstItem="TjM-m4-uPM" firstAttribute="top" secondItem="QBZ-V4-PuH" secondAttribute="bottom" constant="120" id="xpX-pS-eJY"/>
+                            <constraint firstItem="QBZ-V4-PuH" firstAttribute="top" secondItem="Igf-H4-f6e" secondAttribute="top" constant="100" id="wnQ-cD-OqR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Igf-H4-f6e"/>
                     </view>
