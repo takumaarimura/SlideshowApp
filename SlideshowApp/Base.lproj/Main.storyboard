@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,39 +12,39 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBm-Uu-YGR">
-                                <rect key="frame" x="25" y="487" width="31" height="30"/>
+                                <rect key="frame" x="25" y="556" width="31" height="30"/>
                                 <state key="normal" title="進む"/>
                                 <connections>
                                     <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eA6-rE-jZu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2X-h3-VMk">
-                                <rect key="frame" x="172" y="487" width="31" height="30"/>
+                                <rect key="frame" x="191.66666666666666" y="556" width="31" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0YO-31-Daq"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="896C9A60-8289-401E-B2C9-9A7291E8367E_1_105_c" translatesAutoresizingMaskIntoConstraints="NO" id="V2h-M3-FPt">
-                                <rect key="frame" x="117.5" y="90" width="140" height="210"/>
+                                <rect key="frame" x="137" y="90" width="140" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="V3z-26-9h7"/>
                                     <constraint firstAttribute="height" constant="210" id="VSu-1Y-KlP"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsp-1V-AT7">
-                                <rect key="frame" x="319" y="487" width="31" height="30"/>
+                                <rect key="frame" x="358" y="556" width="31" height="30"/>
                                 <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="showButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Rn-5f-KrH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8u-jj-dgT">
-                                <rect key="frame" x="117.5" y="90" width="140" height="210"/>
+                                <rect key="frame" x="137" y="90" width="140" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="2Ma-sv-hxV"/>
                                     <constraint firstAttribute="height" constant="210" id="xEz-t8-rHj"/>
@@ -86,18 +86,18 @@
             <objects>
                 <viewController id="6Da-9b-xmr" customClass="ResultViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eW3-zh-BDb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QBZ-V4-PuH">
-                                <rect key="frame" x="37.5" y="100" width="300" height="450"/>
+                                <rect key="frame" x="57" y="100" width="300" height="450"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="450" id="b3x-Ld-8ls"/>
                                     <constraint firstAttribute="width" constant="300" id="cI4-Jh-KmD"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjM-m4-uPM">
-                                <rect key="frame" x="172" y="587" width="31" height="30"/>
+                                <rect key="frame" x="191.66666666666666" y="656" width="31" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <segue destination="wgQ-Z9-5F7" kind="unwind" unwindAction="unwind:" id="7HG-Gu-PHz"/>

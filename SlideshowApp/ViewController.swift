@@ -89,6 +89,9 @@ class ViewController: UIViewController {
             self.timer.invalidate()
             backTap.isEnabled = true
             nextTap.isEnabled = true
+            
+            showTap.setTitle("再生", for: .normal)
+            self.timer = nil
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
